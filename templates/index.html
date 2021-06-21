@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Flask/GAE demo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    </head>
+    <body lang="en">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>ROT-13 encoder demo</h1>
+                    <hr>
+                </div>
+            </div>
+
+            {% if result %}
+            <div class="row">
+                <div class="col">
+                    <h2>Encoding result</h2>
+                    <textarea class="form-control" rows="10" readonly>{{ result }}</textarea>
+                </div>
+            </div>
+            <hr>
+            {% endif %}
+
+            <div class="row">
+                <div class="col">
+                    <h2>Text to encode</h2>
+                    <form action="/" method="POST">
+                        <textarea class="form-control" rows="10" name="cleartext">{{ result }}</textarea>
+                        <br>
+                        <input type="submit" class="form-control">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
